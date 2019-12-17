@@ -1,0 +1,395 @@
+@charset "utf-8";
+
+/*********************************
+0. Свойства
+*********************************/
+
+*{
+	margin:0;
+	padding: 0;
+	outline: none;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	color:#1C1C1E;
+	font-family: "SF UI", Arial, sans-serif;
+}
+
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}
+
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a{
+	color:#121333;
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+/*********************************
+1. Шапка
+*********************************/
+header{
+	padding: 2%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*Логотип*/
+#logo{
+	font-weight: 800;
+	font-size: 23px;
+	color:#2c802c;
+}
+
+/*Меню*/
+.menu{
+    margin: 0 auto;
+}
+
+.menu ul li
+{
+	display: inline-block;
+}
+.menu ul li:not(:last-child)
+{
+	margin-right: 10px;
+}
+
+.menu ul li a
+{
+	font-weight: 500;
+	font-size: 12px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+    display: block;
+    padding: 3px 14px 3px 14px;
+	line-height: 28px;
+	border-radius: 5px;
+	text-align: center;
+	border: 1px solid #e8e5ea;
+
+}
+
+.menu ul li a:hover
+{
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	border-color: #2c802c;
+}
+
+.menu ul li.active a
+{
+	border-width: 0px;
+   	color: rgba(255,255,255,1);
+	background-image: linear-gradient(to right top, #2c802c, #2c802c);
+}
+
+
+/*Поиск*/
+.search{
+	border: 1px solid #e8e5ea;
+	border-radius: 5px;
+	display: block; 
+	margin-right: 30px;
+}
+
+.header_search_input
+{
+	font-size: 12px;
+	width: 180px;
+	height: 33px;
+	background: rgba(255,255,255,1);
+	border: none;
+	outline: none;
+	padding-left: 10px; 
+	color: #000;
+}
+
+
+/*********************************
+2. Статьи
+*********************************/
+
+.main_content{
+	padding: 2%;
+	display: block;
+}
+
+.all_articles {
+	display: inline-block;
+	justify-content: space-between;
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+
+
+.article{
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height:290px;
+	width: 290px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.article:not(:last-child)
+{
+	margin-right: 20px;
+}
+
+.article:before {
+	border-radius: 6px;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.3) 10%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(rgba(0,0,0,0.3) 10%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(rgba(0,0,0,0.3) 10%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+}
+
+.text_article{
+	position: absolute;
+	padding-left: 25px;
+	bottom: 0;
+	margin-bottom: 33px;
+}
+
+.category{
+	position: absolute;
+	display: block;
+	color: black;
+    padding: 5px 10px 5px 10px;
+    background-image: linear-gradient(to right top, #fff, #fff);
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.category:hover{
+	color: rgba(255,255,255,1);
+	background-image: linear-gradient(to right top, #2c802c, #2c802c);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+}
+
+p{
+	margin-top: 34px;
+	margin-bottom: 9px;
+	font-weight: 700;
+	width: 230px;
+	line-height: 1.5;
+	color: #fff;
+	font-size: 18px;
+}
+
+.read{
+	display: block;
+	color: white;
+	opacity: 0.5;
+    font-size: 11px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.read:hover{
+	opacity: 1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+}
+
+.main_count{
+	opacity: 0.8;
+	display: flex;
+	color: white;
+	position: relative;
+	font-size: 10px;
+}
+
+.main_count_icon{
+	width: 12px;
+	padding-right: 6px;	
+}
+
+.readcount{
+	display: flex;
+	width: 240px;
+	justify-content: space-between;
+
+}
+
+/*********************************
+3. Статья
+*********************************/
+
+.photo{
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height:350px;
+	width: 1300px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+.photo:before {
+	border-radius: 6px;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.post_category
+{
+	margin: 0 auto;
+	width: 83px;
+	color: black;
+	height: 28px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 14px;
+	text-align: center;
+	display: block;
+	font-weight: 600;
+	line-height: 28px;
+	font-size: 11px;
+	color: rgba(254,255,255,1);
+}
+
+.post_category:hover
+{
+	background: rgba(255,255,255,1);
+	color: rgba(0,0,0,0.8);
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+}
+
+.post_title
+{
+	text-align: center;
+	margin: 0 auto;
+	font-size: 28px;
+	color: #FFFFFF;
+	font-weight: 600;
+	margin-top: 19px;
+	width: 500px;
+	line-height: 41px;
+}
+
+.post_head{
+	padding-top: 80px;
+}
+
+.post_text{
+	padding-top: 30px;
+	margin: 0 auto;
+	width: 800px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.9em;
+}
+
+.statistics{
+	color: white;
+	font-size: 13px;
+	width: 400px;
+	margin:0px auto;
+	padding-top: 90px;
+	position: relative;
+}
+
+.time{
+	display: flex;
+	opacity: 0.8;
+}
+
+.time_icon{
+	width: 14px;
+	padding-right: 8px;
+}
+
+.count{
+	opacity: 0.8;
+	display: flex;
+}
+
+.count_icon{
+	width: 16px;
+	padding-right: 8px;	
+}
+
+
+.post_share{
+	margin-bottom: 40px;
+	margin-top: 70px;
+	font-size: 12px;
+	color: rgba(0,0,0,0.4);
+	font-weight: 700;
+	text-align: left;
+	float: right;
+}
+
+.ya-share2{
+	text-align: left;
+	font-weight: 300;
+	padding-top: 1px;
+}
+
+#vk_comments{
+	margin: 0 auto;
+}
+
+/*********************************
+3. Футер
+*********************************/
+footer{
+}
+
+#rights{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 14px;
+}
